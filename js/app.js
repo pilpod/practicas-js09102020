@@ -1,10 +1,30 @@
-let dog = {
-    name: "Toucao",
-    race: "patater",
-    bark: () => {
-        return 'GUAU GUAU';
-    },
+const nameDOM = document.getElementById('name');
+const btn = document.querySelector('button');
+
+function Execute() {
+    GetInput();
+    drawDOM(name);
+    drawConsole(name);
 }
 
-console.log(dog.name);
-console.log(dog.bark());
+function GetInput() {
+    name = document.querySelector('#inputTexto').value;
+    return name;
+}
+
+function drawDOM(name) {
+    nameDOM.innerHTML = name;
+}
+
+function drawConsole(name) {
+    console.log(name);
+}
+
+btn.addEventListener('click', Execute);
+
+
+
+
+
+
+
